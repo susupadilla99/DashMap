@@ -1,13 +1,12 @@
 class Map(width: Int, height: Int) {
-    class Point(var x: Float, var y: Float){}
 
-    val wayPoints = ArrayList<Point>()
+    val wayPoints = ArrayList<Container>()
 
-    fun addPoint(x: Float, y: Float) {
-        wayPoints.add(Point(x, y))
+    fun addContainer(x: Float, y: Float, w: Float, h: Float) {
+        wayPoints.add(Container(x, y, w, h))
     }
 
-    fun addPoint(p: Point) {
-        wayPoints.add(Point(p.x, p.y))
+    fun addContainer(c: Container) {
+        wayPoints.add(Container(c.x, c.y, c.width, c.height))
     }
 }
